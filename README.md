@@ -27,7 +27,12 @@ Steps :
 		>> exit
 		>> exit
 
-4. Connect to ceph-node1 through exposed SSH port (check docker ps) to verify it is running (passwàrd : passw0rd)
+4. Connect to ceph-node1 through exposed SSH port (check docker ps) to verify it is running (password : passw0rd)
 	> ssh root@localhost -p <exposed port for ceph-node1>
 	> ceph -w
+
+Stop & start, clean... :
+
+Just run ./stop.sh and ./restart.sh to stop/start all the containers. Ceph will be automatically restarted.
+The clean-all.sh script will erase everything while clean-containers.sh will only remove the 4 created containers.
 
