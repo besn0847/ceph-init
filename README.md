@@ -10,6 +10,11 @@ Pre-requisites :
 
 Steps :
 
+0. Reset correct permissions (issue with Github to be sorted)
+	> chmod 600 ceph-deploy/id_rsa
+	> chmod 644 ceph-deploy/id_rsa.pub 
+
+
 1. Run the init.sh script from local directory (it takes about 5 minutes to build all containers) 
 	> ./init.sh
 
@@ -21,8 +26,9 @@ Steps :
 		>> su - ceph
 		>> ./bootstrap.sh
 		>> exit
+		>> exit
 
-4. Connect to ceph-node1 through exposed SSH port (check docker ps) to verify it is running
+4. Connect to ceph-node1 through exposed SSH port (check docker ps) to verify it is running (passwàrd : passw0rd)
 	> ssh root@localhost -p <exposed port for ceph-node1>
 	> ceph -w
 
