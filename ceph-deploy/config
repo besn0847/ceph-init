@@ -1,0 +1,9 @@
+Host ceph-node1
+   Hostname ceph-node1
+   User ceph
+Host ceph-node2
+   Hostname ceph-node2
+   User ceph
+Host ceph-node3
+   Hostname ceph-node3
+   User ceph
