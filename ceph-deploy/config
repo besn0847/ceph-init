@@ -7,3 +7,6 @@ Host ceph-node2
 Host ceph-node3
    Hostname ceph-node3
    User ceph
+Host ceph-node4
+   Hostname ceph-node4
+   User ceph

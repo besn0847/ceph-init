@@ -19,6 +19,7 @@ ADD ceph.conf /home/ceph/ceph.conf
 ADD bootstrap.sh /home/ceph/bootstrap.sh
 ADD init-mon.sh /home/ceph/init-mon.sh
 ADD init-osd.sh /home/ceph/init-osd.sh
+ADD init-mds.sh /home/ceph/init-mds.sh
 RUN chown -R ceph.ceph /home/ceph/
 
 ENTRYPOINT ["/bin/bash"]

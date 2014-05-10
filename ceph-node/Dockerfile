@@ -2,6 +2,7 @@ FROM ceph/base
 MAINTAINER franck@besnard.mobi 
 
 RUN apt-get install -y ceph
+RUN apt-get install -y ceph-mds
 RUN apt-get clean
 
 RUN mkdir -p /home/ceph/.ssh
