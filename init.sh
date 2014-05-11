@@ -18,6 +18,9 @@ mkdir -p ../Volumes/ceph/mnt/ceph-1
 sudo mount -o loop ../Volumes/ceph/ceph-0   ../Volumes/ceph/mnt/ceph-0
 sudo mount -o loop ../Volumes/ceph/ceph-1   ../Volumes/ceph/mnt/ceph-1
 
+# Step : set up mount point for Ceph FS drive
+mkdir -p ../Volumes/ceph/mnt/ceph-ds/
+
 # Step : Create the ceph/base image
 cd ceph-base
 docker build -t ceph/base .

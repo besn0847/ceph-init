@@ -28,3 +28,9 @@ scp ceph.conf ceph@ceph-node4:/home/ceph
 scp init-mds.sh ceph@ceph-node4:/home/ceph
 
 ssh ceph@ceph-node4 'sudo /home/ceph/init-mds.sh 0 ceph-node1'
+
+# Step : Mount CephFS drive
+KEY=`grep "key = " ceph.client.admin.keyring | awk -F "key = " '{ print $2}' -`
+echo "To mount the Ceph FS drive, run : "
+echo "sudo mount -t ceph 10.10.0.11:6789:/ ../Volumes/ceph/mnt/ceph-ds/ -o name=admin,secret="$KEY
+
