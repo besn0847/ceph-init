@@ -39,5 +39,5 @@ Make sure you use Docker 0.10.0 otherwise there might be FUSE issues when instal
 
 ##Stop & start, clean... 
 Just run ./stop.sh and ./restart.sh to stop/start all the containers. Ceph will be automatically restarted.
-The clean-all.sh script will erase everything while clean-containers.sh will only remove the 4 created containers.
+The clean-all.sh script will erase everything while clean-containers.sh will only remove the 5 created containers.
 
