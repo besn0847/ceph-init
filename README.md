@@ -1,5 +1,5 @@
-This setup will install ceph with 1 MON and 2 OSD on 1 docker.
-Open vSwitch is required to plum all the nodes together (needed for multi docker environment - to be done later).
+This setup will install ceph with 1 MON, 2 OSD & 1 MDS on 1 docker.
+Open vSwitch is required to plumb all the nodes together (needed for multi-docker environment - see part II of this post - not available for now).
 
 ##Pre-requisites
 
@@ -7,17 +7,15 @@ Open vSwitch is required to plum all the nodes together (needed for multi docker
 - Open vSwitch 1.4.6 (packages : openvswitch-common, openvswitch-switch, openvswitch-datapath-dkms)
 - CGroup 1.1.5 (packages : cgroup-lite)
 
+Make sure you use Docker 0.10.0 otherwise there might be FUSE issues when installing the ceph-mds package in the images.
+
 
 ##Steps
-
-0. Reset correct permissions (issue with Github to be sorted)
-	(host)> chmod 600 ceph-deploy/id_rsa && chmod 644 ceph-deploy/id_rsa.pub 
-
 
 1. Run the init.sh script from local directory (it takes about 5 minutes to build all containers) 
 	> (host)> ./init.sh
 
-2. Start the 4 containers (1 for deployment and 3 for Ceph configuration)
+2. Start the 5 containers (1 for deployment and 4 for Ceph set-up)
 	> (host)> ./start.sh
 
 3. Connect to the ceph-deploy container and bootstrap the environment
