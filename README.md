@@ -1,3 +1,5 @@
+Associated blog post : http://fbevmware.blogspot.fr/2014/05/software-defined-compute-network-and.html
+
 This setup will install ceph with 1 MON, 2 OSD & 1 MDS on 1 docker.
 Open vSwitch is required to plumb all the nodes together (needed for multi-docker environment - see part II of this post - not available for now).
 
