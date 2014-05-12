@@ -27,12 +27,17 @@ Steps :
 		>> exit
 		>> exit
 
-4. Connect to ceph-node1 through exposed SSH port (check docker ps) to verify it is running (password : passw0rd)
+4. Connect to ceph-node1 through exposed SSH port (check docker ps) to verify it is running (password : passw0rd) and wait until the cluster start-up is OK
 	> ssh root@localhost -p <exposed port for ceph-node1>
 	> ceph -w
 
-Stop & start, clean... :
+5. Mount the Ceph FS drive using the output of the bootstrap script (each deployment will create a different key)
+	> sudo mount -t ceph 10.10.0.11:6789:/ ../Volumes/ceph/mnt/ceph-ds/ -o name=admin,secret=AQCHwHBTyKOJKBAA4gfK33sw/V9zkzlR5g9GtA==
+	> df -k ../Volumes/ceph/mnt/ceph-ds/
 
+
+Stop & start, clean... :
+------------------------
 Just run ./stop.sh and ./restart.sh to stop/start all the containers. Ceph will be automatically restarted.
 The clean-all.sh script will erase everything while clean-containers.sh will only remove the 4 created containers.
 

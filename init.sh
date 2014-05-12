@@ -1,6 +1,7 @@
 #!/bin/sh
 
-# Step : Check if all pre-requisites are matched (TO BE DONE)
+# Step : Restore permissions
+chmod 600 ceph-deploy/id_rsa && chmod 644 ceph-deploy/id_rsa.pub 
 
 # Step : Add the br10 bridge
 sudo ovs-vsctl add-br br10 
