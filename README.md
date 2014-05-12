@@ -38,6 +38,7 @@ Make sure you use Docker 0.10.0 otherwise there might be FUSE issues when instal
 
 	> (host)> df -k ../Volumes/ceph/mnt/ceph-ds/
 
+Just make sure you give some time for the cluster to correctly boot up before mounting the drive. 
 
 ##Stop & start, clean... 
 Just run ./stop.sh and ./restart.sh to stop/start all the containers. Ceph will be automatically restarted.
